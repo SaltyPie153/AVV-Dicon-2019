@@ -2,7 +2,9 @@
 module.exports = (sequelize, DataTypes) => {
   const Feed = sequelize.define('Feed', {
     title: DataTypes.STRING,
-    content: DataTypes.STRING
+    content: DataTypes.STRING,
+    category: DataTypes.STRING,
+    image: DataTypes.STRING,
   }, {});
   Feed.associate = function(models) {
     Feed.hasOne(models.Question)

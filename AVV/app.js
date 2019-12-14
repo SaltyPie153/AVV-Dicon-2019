@@ -16,6 +16,7 @@ app.use(session({
     saveUninitialized: true
 }))
 
+app.use('/uploads',express.static('uploads'))
 app.use('/user',require('./routers/user.js'));
 app.use('/feed',require('./routers/feed.js'));
 app.use('/thread',require('./routers/thread.js'));
