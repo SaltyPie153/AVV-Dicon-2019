@@ -2,6 +2,11 @@ const express = require('express');
 const session = require('express-session');
 const router = express.Router();
 const Threads = require("../models").Thread;
+const path = require('path');
+
+router.get('/feed', function (request, response) {
+    response.sendFile(path.join(__dirname + '/thread.html'));
+})
 
 router.post('/feed', function(request, response){
     let title = request.body.title;

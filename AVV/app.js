@@ -5,7 +5,7 @@ const app = express();
 
 //const model = require("./models");
 
-//model.sequelize.sync({force:true});
+//model.sequelize.sync({force:false});
 
 app.use(express.json());
 app.use(cookieParser());

@@ -17,6 +17,10 @@ router.post('/feed', function(request, response){
     }).catch(function(err){
         console.error(err);
     });
+//작성중 이미지 클릭시 votecnt++
+    if(onclick.image){
+        votecnt++;
+    }
 });
 
 module.exports = router;
