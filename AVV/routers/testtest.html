@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function clk(){
+            fetch('',{
+                method: 'POST'
+                //여기는 다른거도 들갈수있음 header라던지 body 같이 요청내욜을 쓸수도 있고 뭐...
+            }) //지금은 현재 경로니까 비워둔거임 
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(myJson) {
+                console.log(JSON.stringify(myJson));
+            });
+        }
+    </script>
+    <button onclick="clk()">와 샌즈 버튼</button>
+</body>
+</html>
