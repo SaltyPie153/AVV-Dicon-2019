@@ -74,7 +74,7 @@ router.post('/login', function(request, response){
         }else{
             console.log("로그인 성공");
             var session = request.session;
-            session.username = data.username;
+            session.username = data.name;
             session.email = data.email;
             session.uid = data.id;
             console.log('set session :' + session);
@@ -98,6 +98,8 @@ router.get('/visitors',function(request,response){
 
     console.log('Cookies: ',request.cookies)
     console.log('Signed Cookies: ',request.signedCookies)
+    console.log('user:',request.session.username)
+    console.log('userid:',request.session.uid)
 })
 
 router.get("/isLogined",function(request,response){

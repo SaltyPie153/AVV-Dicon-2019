@@ -3,9 +3,9 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser')
 const app = express();
 
-//const model = require("./models");
+const model = require("./models");
 
-//model.sequelize.sync({force:false});
+model.sequelize.sync({force:false});
 
 app.use(express.json());
 app.use(cookieParser());

@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     type: DataTypes.STRING
   },{sequelize})
   User.associate = function(models) {
-    User.hasMany(models.Thread)//, {as: 'author'})
+    User.hasMany(models.Thread)
     // associations can be defined here
   };
   return User;

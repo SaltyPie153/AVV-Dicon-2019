@@ -6,8 +6,16 @@
     </head>
     <body>
         <h1>Thread</h1>
-        <form action="" method="POST">
+        <form action="" enctype="multipart/form-data" method="POST">
+            <input type="text" name=title placeholder="title" required>
+            <select name="category">
+                <option value="beauty">beauty</option>
+                <option value="technology">technology</option>
+            </select>
+            <input type="file" name="file" multiple>
+            <p>
+                <input type="submit" name="submit">
+            </p>
         </form>
     </body>
 </html>
-<!--작성중-->
